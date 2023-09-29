@@ -21,7 +21,10 @@ def password(request):
     if request.GET.get('special'):
         characters.extend('!@#$^&%*()')
 
-    length = int(request.GET.get('length', 12))
+    try:
+        length = int(request.GET.get('length', 12))
+    except BaseException:
+        return home(request)
     thepassword = ''
     for i in range(length):
         thepassword += random.choice(characters)

@@ -1,23 +1,31 @@
-<h1>Password Generator</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>password generator</title>
+    <link rel="stylesheet" href="../../static/generator/css/home.css">
+</head>
+<body>
+<h1 align="center">Password Generator</h1>
+    <div class="main">
 
-<form action="{% url 'password' %}">
-    <select name="length">
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12" selected="selected">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-    </select>
-    <br>
-    <input type="checkbox" name="uppercase"> Uppercase
-    <br>
-    <input type="checkbox" name="numbers"> Numbers
-    <br>
-    <input type="checkbox" name="special"> Special Characters
-    <br>
-    <input type="submit" value="Generate Password">
-</form>
+        <div class="mainInside">
+
+
+            <form action="{% url 'password' %}">
+                <input type="text" name="length" class="text" placeholder="enter length">
+                <br>
+                <div class="checkboxes">
+                    <input type="checkbox" name="uppercase"> Uppercase
+                    <input type="checkbox" name="numbers" style="margin-left: 55px"> Numbers
+                    <input type="checkbox" name="special" style="margin-left: 55px"> Special Characters
+                </div>
+                <br>
+                <div class="button">
+                    <input type="submit" value="Generate Password">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
