@@ -12,16 +12,16 @@
 
 
             <form action="{% url 'password' %}">
-                <input type="text" name="length" class="text" placeholder="enter length">
+                <input type="text" name="length" class="text" placeholder="enter length" autocomplete="off">
                 <br>
                 <div class="checkboxes">
-                    <input type="checkbox" name="uppercase"> Uppercase
-                    <input type="checkbox" name="numbers" style="margin-left: 55px"> Numbers
-                    <input type="checkbox" name="special" style="margin-left: 55px"> Special Characters
+                    <input type="checkbox" name="uppercase"><span>Uppercase</span>
+                    <input type="checkbox" name="numbers" style="margin-left: 55px"><span>Numbers</span>
+                    <input type="checkbox" name="special" style="margin-left: 55px"><span>Special Characters</span>
                 </div>
                 <br>
                 <div class="button">
-                    <input type="submit" value="Generate Password">
+                    <input type="submit" value="Generate Password" class="button1">
                 </div>
 
             </form>
