@@ -27,6 +27,9 @@ def password(request):
         return home(request)
     thepassword = ''
     for i in range(length):
+        if len(thepassword) > 50:
+            return render(request, 'generator/password.html', {'password': thepassword})
         thepassword += random.choice(characters)
-
+    if thepassword is '':
+        thepassword += '-'
     return render(request, 'generator/password.html', {'password': thepassword})
